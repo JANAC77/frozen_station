@@ -77,7 +77,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="text-brand-secondary shrink-0 mt-1" size={20} />
                 <span className="text-gray-400 leading-relaxed">
-                  Bengaluru, Karnataka<br />
+                  Cochin, Kerala<br />
                   India
                 </span>
               </li>

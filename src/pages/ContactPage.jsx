@@ -36,7 +36,7 @@ const ContactPage = () => {
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Our Office</h4>
                       <p className="text-gray-300 leading-relaxed">
-                        Bengaluru, Karnataka<br/>
+                        Cochin, Kerala<br/>
                         India
                       </p>
                     </div>
