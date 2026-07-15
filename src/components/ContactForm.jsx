@@ -11,7 +11,7 @@ const ContactForm = () => {
             type="text" 
             id="name" 
             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
-            placeholder="John Doe"
+            placeholder="e.g. Raj Kumar"
             required
           />
         </div>
@@ -21,7 +21,7 @@ const ContactForm = () => {
             type="email" 
             id="email" 
             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
-            placeholder="john@example.com"
+            placeholder="e.g. raj@example.com"
             required
           />
         </div>
@@ -34,7 +34,7 @@ const ContactForm = () => {
             type="tel" 
             id="phone" 
             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
-            placeholder="+1 (555) 000-0000"
+            placeholder="e.g. +91 98765 43210"
           />
         </div>
         <div>
@@ -43,7 +43,7 @@ const ContactForm = () => {
             type="text" 
             id="company" 
             className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all"
-            placeholder="Seafood Co."
+            placeholder="e.g. Fresh Catch Traders"
           />
         </div>
       </div>
@@ -54,7 +54,7 @@ const ContactForm = () => {
           id="message" 
           rows="5"
           className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:border-transparent transition-all resize-none"
-          placeholder="Tell us about your requirements..."
+          placeholder="Please describe your seafood requirements in detail..."
           required
         ></textarea>
       </div>
