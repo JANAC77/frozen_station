@@ -71,21 +71,21 @@ const Hero = () => {
       {/* Slider Left Arrow */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white transition-all z-20"
+        className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-16 md:h-16 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white transition-all z-20"
       >
-        <ArrowLeft size={28} />
+        <ArrowLeft size={24} className="md:w-7 md:h-7" />
       </button>
 
       {/* Slider Right Arrow */}
       <button 
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm flex items-center justify-center text-white/90 hover:text-white transition-all z-20"
+        className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-16 md:h-16 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm flex items-center justify-center text-white/90 hover:text-white transition-all z-20"
       >
-        <ArrowRight size={28} />
+        <ArrowRight size={24} className="md:w-7 md:h-7" />
       </button>
 
       {/* Text Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-16 sm:px-24 lg:px-32 w-full pt-12 h-full flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-12 sm:px-20 lg:px-32 w-full pt-12 h-full flex items-center">
         {slides.map((slide, index) => (
           <div 
             key={slide.id} 
@@ -95,20 +95,20 @@ const Hero = () => {
                 : 'opacity-0 translate-y-8 absolute pointer-events-none'
             }`}
           >
-            <div className="flex items-center text-[#f4c430] font-bold text-sm tracking-widest uppercase mb-6 drop-shadow-md">
-              <span className="w-10 h-[2px] bg-[#f4c430] mr-4"></span>
+            <div className="flex items-center text-[#f4c430] font-bold text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6 drop-shadow-md">
+              <span className="w-8 sm:w-10 h-[2px] bg-[#f4c430] mr-3 sm:mr-4"></span>
               <span>{slide.subtitle}</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight drop-shadow-xl leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-xl leading-[1.1]">
               {slide.titleFirst} <span className="text-[#f4c430]">{slide.titleHighlight}</span>
             </h1>
 
             <div className="inline-flex flex-col sm:flex-row shadow-2xl pointer-events-auto">
-              <Link to={slide.link} className="bg-[#0a3161] hover:bg-blue-900 text-white px-8 py-3 md:px-10 md:py-4 font-bold text-xs md:text-sm tracking-widest uppercase transition-colors text-center flex items-center justify-center">
+              <Link to={slide.link} className="bg-[#0a3161] hover:bg-blue-900 text-white px-6 py-3 sm:px-8 md:px-10 md:py-4 font-bold text-xs md:text-sm tracking-widest uppercase transition-colors text-center flex items-center justify-center">
                 LEARN MORE
               </Link>
-              <Link to="/contact" className="bg-[#f4c430] hover:bg-[#e0b020] text-white px-8 py-3 md:px-10 md:py-4 font-bold text-xs md:text-sm tracking-widest uppercase transition-colors text-center flex items-center justify-center">
+              <Link to="/contact" className="bg-[#f4c430] hover:bg-[#e0b020] text-white px-6 py-3 sm:px-8 md:px-10 md:py-4 font-bold text-xs md:text-sm tracking-widest uppercase transition-colors text-center flex items-center justify-center">
                 CONTACT US
               </Link>
             </div>

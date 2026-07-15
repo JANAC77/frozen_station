@@ -3,8 +3,8 @@ import { Send } from 'lucide-react';
 
 const ContactForm = () => {
   return (
-    <form className="bg-white p-8 md:p-10 rounded-3xl w-full shadow-xl border border-gray-100" onSubmit={(e) => e.preventDefault()}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <form className="bg-white p-5 sm:p-8 md:p-10 rounded-3xl w-full shadow-xl border border-gray-100" onSubmit={(e) => e.preventDefault()}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
           <input 

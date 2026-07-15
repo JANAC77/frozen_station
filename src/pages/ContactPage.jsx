@@ -36,8 +36,8 @@ const ContactPage = () => {
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Our Office</h4>
                       <p className="text-gray-300 leading-relaxed">
-                        Cochin (Kochi), Kerala<br/>
-                        Seafood Capital of India
+                        Bengaluru, Karnataka<br/>
+                        India
                       </p>
                     </div>
                   </div>
@@ -48,8 +48,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Email Us</h4>
-                      <a href="mailto:info@frozenstation.com" className="text-gray-300 hover:text-brand-secondary transition-colors">
-                        info@frozenstation.com
+                      <a href="mailto:sales.frozenstation@gmail.com" className="text-gray-300 hover:text-brand-secondary transition-colors">
+                        sales.frozenstation@gmail.com
                       </a>
                     </div>
                   </div>
@@ -60,8 +60,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Call Us</h4>
-                      <a href="tel:+910000000000" className="text-gray-300 hover:text-brand-secondary transition-colors">
-                        +91 000 000 0000
+                      <a href="tel:+919036525993" className="text-gray-300 hover:text-brand-secondary transition-colors">
+                        +91 90365 25993
                       </a>
                     </div>
                   </div>

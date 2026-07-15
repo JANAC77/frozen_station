@@ -108,12 +108,12 @@ const Products = () => {
       {/* Our Seafood Categories Section */}
       <section className="py-12 bg-[#fafafa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="w-8 h-[1px] bg-[#f4c430]"></span>
               <span className="text-[#f4c430] font-bold tracking-widest text-sm uppercase">Categories</span>
             </div>
-            <h2 className="text-4xl md:text-[2.75rem] font-bold text-[#0a3161] tracking-tight">Our Seafood Categories</h2>
+            <h2 className="text-3xl md:text-[2.75rem] font-bold text-[#0a3161] tracking-tight leading-tight">Our Seafood Categories</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,17 +141,17 @@ const Products = () => {
       <section className="py-24 bg-[#fafafa] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-[2.75rem] font-bold text-[#0a3161] tracking-tight">Detailed Information</h2>
+          <div className="text-center mb-10 md:mb-16">
+             <h2 className="text-3xl md:text-[2.75rem] font-bold text-[#0a3161] tracking-tight leading-tight">Detailed Information</h2>
           </div>
 
           {/* Custom Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12">
             {oldCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 ${
+                className={`px-5 py-2.5 md:px-8 md:py-4 rounded-full font-bold text-sm md:text-lg transition-all duration-300 ${
                   activeTab === cat.id 
                   ? 'bg-[#0a3161] text-white shadow-xl shadow-[#0a3161]/30 transform -translate-y-1' 
                   : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-[#0a3161] border border-gray-200'
@@ -165,18 +165,18 @@ const Products = () => {
           {/* Product Display Area */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-500 flex flex-col md:flex-row">
             
-            <div className="md:w-1/2 relative h-64 md:h-auto overflow-hidden group">
+            <div className="md:w-1/2 relative h-56 md:h-auto overflow-hidden group">
               <img 
                 src={activeData.image} 
                 alt={activeData.title} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a3161]/80 to-transparent"></div>
-              <h4 className="absolute bottom-8 left-8 text-3xl font-bold text-white">{activeData.title}</h4>
+              <h4 className="absolute bottom-4 left-6 md:bottom-8 md:left-8 text-2xl md:text-3xl font-bold text-white">{activeData.title}</h4>
             </div>
 
-            <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-              <p className="text-gray-600 text-lg mb-8">{activeData.description}</p>
+            <div className="md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
+              <p className="text-gray-600 text-base md:text-lg mb-6 md:mb-8">{activeData.description}</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {activeData.items.map((item, index) => (

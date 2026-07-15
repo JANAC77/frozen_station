@@ -36,7 +36,7 @@ const Navbar = () => {
           </Link>
 
           {/* Spacer for the absolute logo */}
-          <div className="w-40 md:w-56"></div>
+          <div className="w-24 sm:w-40 md:w-56"></div>
 
           <div className="hidden lg:flex flex-1 justify-end items-center space-x-4 lg:space-x-5 xl:space-x-8">
             <Link to="/" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-[#f4c430]'}`}>

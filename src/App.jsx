@@ -13,6 +13,7 @@ import CephalopodsPage from './pages/CephalopodsPage';
 import WhyChooseUsPage from './pages/WhyChooseUsPage';
 import QualityAssurancePage from './pages/QualityAssurancePage';
 import GlobalMarketsPage from './pages/GlobalMarketsPage';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
