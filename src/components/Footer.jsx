@@ -8,18 +8,18 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Call to Action Banner */}
-        <div className="bg-brand-primary rounded-3xl p-10 mb-16 shadow-2xl transform -translate-y-1/2 mt-[-80px] flex flex-col md:flex-row items-center justify-between border border-white/10 relative overflow-hidden">
+        <div className="bg-brand-primary rounded-3xl p-8 md:p-10 mb-12 shadow-2xl -mt-16 md:-mt-24 flex flex-col md:flex-row items-center justify-between border border-white/10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/20 rounded-full blur-3xl"></div>
           <div className="relative z-10 mb-6 md:mb-0 text-center md:text-left">
-            <h3 className="text-3xl font-bold text-white mb-2">Ready to partner with us?</h3>
-            <p className="text-brand-secondary font-medium text-lg">Delivering confidence, consistency, and quality with every shipment.</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Ready to partner with us?</h3>
+            <p className="text-brand-secondary font-medium text-base md:text-lg">Delivering confidence, consistency, and quality with every shipment.</p>
           </div>
-          <Link to="/contact" className="relative z-10 bg-brand-secondary hover:bg-white hover:text-brand-primary text-white px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg whitespace-nowrap">
+          <Link to="/contact" className="relative z-10 bg-brand-secondary hover:bg-white hover:text-brand-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold transition-all duration-300 shadow-lg whitespace-nowrap">
             Contact Our Team
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 mt-[-40px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
           {/* Brand */}
           <div className="lg:col-span-1">
