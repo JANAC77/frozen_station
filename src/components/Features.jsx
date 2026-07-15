@@ -42,9 +42,9 @@ const Features = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-brand-secondary font-bold tracking-widest uppercase text-sm mb-3">The Frozen Station Advantage</h2>
+          <h2 className="text-[#3b82f6] font-bold tracking-widest uppercase text-sm mb-3">The Frozen Station Advantage</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white">Why Choose Us?</h3>
-          <div className="w-24 h-1 bg-brand-secondary mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-[#3b82f6] mx-auto mt-6 rounded-full"></div>
           <p className="mt-6 text-gray-300 max-w-2xl mx-auto text-lg">
             We understand that every customer has unique business requirements. Our experienced team works closely with buyers to provide the right products with consistent quality and dependable logistics.
           </p>

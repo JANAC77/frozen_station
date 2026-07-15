@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Anchor } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,47 +16,73 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Contact', href: '/contact' },
+  const productCategories = [
+    { name: 'Shrimps', href: '/products/shrimps' },
+    { name: 'Fishes', href: '/products/fishes' },
+    { name: 'Crustaceans & Cephalopods', href: '/products/cephalopods' },
   ];
 
+  // Force dark text/white background style if we are not on a page with a dark hero image at the top.
+  const hasDarkHero = ['/', '/why-choose-us', '/quality-assurance', '/global-markets'].includes(location.pathname) || location.pathname.startsWith('/products/');
+  const isDarkStyle = isScrolled || !hasDarkHero;
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/90 backdrop-blur-sm py-5'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 cursor-pointer">
-            <img src="/logo.png" alt="Frozen Station Logo" className="h-16 md:h-20 w-auto mix-blend-multiply" style={{ objectFit: 'contain' }} />
-            <div className="flex flex-col hidden sm:flex">
-              <span className="text-brand-primary font-bold text-2xl md:text-3xl leading-none tracking-tight">FROZEN STATION</span>
-              <span className="text-brand-secondary text-[10px] md:text-xs uppercase tracking-widest font-semibold mt-1">FROM INDIA TO THE WORLD</span>
-            </div>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isDarkStyle ? 'bg-white shadow-md py-4' : 'bg-transparent py-4'}`}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center relative">
+          {/* Logo in a protruding white box */}
+          <Link to="/" className="absolute left-0 top-0 bg-white shadow-md px-5 md:px-6 pb-2 pt-2 rounded-b-lg z-10 flex items-center justify-center" style={{ transform: isDarkStyle ? 'translateY(-10px)' : 'translateY(-16px)' }}>
+            <img src="/logo.png" alt="Amigo Seafood Logo" className="h-14 md:h-20 w-auto mix-blend-multiply object-contain" />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors text-sm uppercase tracking-wider"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link to="/contact" className="bg-brand-primary hover:bg-brand-accent text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-primary/30 hover:shadow-brand-accent/40 transform hover:-translate-y-0.5 inline-block text-center">
+          {/* Spacer for the absolute logo */}
+          <div className="w-40 md:w-56"></div>
+
+          <div className="hidden lg:flex flex-1 justify-end items-center space-x-4 lg:space-x-5 xl:space-x-8">
+            <Link to="/" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-[#f4c430]'}`}>
+              HOME
+            </Link>
+            <Link to="/about" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+              ABOUT US
+            </Link>
+
+            {/* Products Dropdown */}
+            <div className="relative group" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
+              <button className={`whitespace-nowrap flex items-center font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+                PRODUCTS <ChevronDown size={14} className="ml-1" />
+              </button>
+              {/* Invisible area to bridge gap */}
+              <div className="absolute left-0 w-full h-4"></div>
+              <div className={`absolute left-0 mt-6 w-72 bg-white shadow-xl py-2 z-50 transition-all duration-200 ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                {productCategories.map((cat, idx) => (
+                  <Link key={idx} to={cat.href} className="block px-8 py-4 text-[#0a3161] font-bold text-[13px] xl:text-sm tracking-normal hover:text-[#f4c430] hover:bg-gray-50 transition-colors">
+                    {cat.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link to="/why-choose-us" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+              WHY CHOOSE US
+            </Link>
+            <Link to="/quality-assurance" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+              QUALITY ASSURANCE
+            </Link>
+            <Link to="/global-markets" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+              GLOBAL MARKETS
+            </Link>
+
+            <Link to="/contact" className={`whitespace-nowrap font-bold text-[11px] xl:text-xs tracking-widest transition-colors leading-tight ${isDarkStyle ? 'text-[#0a3161] hover:text-[#f4c430]' : 'text-white hover:text-gray-200'}`}>
+              CONTACT US
+            </Link>
+            <Link to="/contact" className="whitespace-nowrap bg-[#f4c430] hover:bg-[#e0b020] text-white px-6 py-2.5 rounded-full font-bold text-[11px] xl:text-xs tracking-widest transition-colors shadow-lg ml-2">
               ENQUIRY
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-brand-primary hover:text-brand-accent focus:outline-none"
-            >
+          <div className="md:hidden flex items-center justify-end flex-1">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={`${isDarkStyle ? 'text-[#0a3161]' : 'text-white'} focus:outline-none bg-black/20 p-2 rounded`}>
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
@@ -63,20 +91,29 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-3 text-base font-medium text-gray-800 hover:bg-brand-secondary/10 hover:text-brand-primary rounded-md"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-center w-full mt-4 bg-brand-primary text-white px-6 py-3 rounded-md font-medium">
-              Get a Quote
+        <div className="md:hidden bg-white shadow-lg absolute w-full top-full left-0">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link to="/" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+            <Link to="/about" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
+
+            <div className="px-3 py-3">
+              <span className="block text-[#0a3161] hover:text-[#f4c430] font-bold mb-2">PRODUCTS</span>
+              <div className="pl-4 space-y-2 border-l-2 border-gray-100">
+                {productCategories.map((cat, idx) => (
+                  <Link key={idx} to={cat.href} onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-600 hover:text-[#f4c430]">
+                    {cat.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link to="/why-choose-us" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>WHY CHOOSE US</Link>
+            <Link to="/quality-assurance" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>QUALITY ASSURANCE</Link>
+            <Link to="/global-markets" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>GLOBAL MARKETS</Link>
+
+            <Link to="/contact" className="block px-3 py-2 text-[#0a3161] hover:text-[#f4c430] font-bold" onClick={() => setMobileMenuOpen(false)}>CONTACT US</Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-center w-full mt-4 bg-[#f4c430] text-white px-6 py-3 font-bold">
+              ENQUIRY
             </Link>
           </div>
         </div>

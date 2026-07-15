@@ -7,6 +7,12 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import ContactPage from './pages/ContactPage';
+import ShrimpsPage from './pages/ShrimpsPage';
+import FishesPage from './pages/FishesPage';
+import CephalopodsPage from './pages/CephalopodsPage';
+import WhyChooseUsPage from './pages/WhyChooseUsPage';
+import QualityAssurancePage from './pages/QualityAssurancePage';
+import GlobalMarketsPage from './pages/GlobalMarketsPage';
 
 function App() {
   return (
@@ -17,7 +23,13 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
+          <Route path="/quality-assurance" element={<QualityAssurancePage />} />
+          <Route path="/global-markets" element={<GlobalMarketsPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/shrimps" element={<ShrimpsPage />} />
+          <Route path="/products/fishes" element={<FishesPage />} />
+          <Route path="/products/cephalopods" element={<CephalopodsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
