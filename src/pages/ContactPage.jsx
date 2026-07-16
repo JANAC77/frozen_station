@@ -47,9 +47,14 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Email Us</h4>
-                      <a href="mailto:sales.frozenstation@gmail.com" className="text-gray-300 hover:text-brand-secondary transition-colors">
-                        sales.frozenstation@gmail.com
-                      </a>
+                      <div className="flex flex-col gap-1">
+                        <a href="mailto:sales.frozenstation@gmail.com" className="text-gray-300 hover:text-brand-secondary transition-colors">
+                          sales.frozenstation@gmail.com
+                        </a>
+                        <a href="mailto:enquiry@frozenstation.com" className="text-gray-300 hover:text-brand-secondary transition-colors">
+                          enquiry@frozenstation.com
+                        </a>
+                      </div>
                     </div>
                   </div>
 

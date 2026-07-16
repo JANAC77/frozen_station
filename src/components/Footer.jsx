@@ -61,9 +61,12 @@ const Footer = () => {
                 <Phone className="text-brand-secondary shrink-0" size={20} />
                 <span className="text-gray-400">+91 90365 25993</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="text-brand-secondary shrink-0" size={20} />
-                <span className="text-gray-400">sales.frozenstation@gmail.com</span>
+              <li className="flex items-start gap-3">
+                <Mail className="text-brand-secondary shrink-0 mt-1" size={20} />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:sales.frozenstation@gmail.com" className="text-gray-400 hover:text-brand-secondary transition-colors">sales.frozenstation@gmail.com</a>
+                  <a href="mailto:enquiry@frozenstation.com" className="text-gray-400 hover:text-brand-secondary transition-colors">enquiry@frozenstation.com</a>
+                </div>
               </li>
             </ul>
           </div>
