@@ -19,20 +19,6 @@ const FishesPage = () => {
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
     },
     {
-      id: 'indian-oil-sardine',
-      name: 'Indian Oil Sardine',
-      image: '/category_fishes_1784091868850.png',
-      actionText: 'Contact Us',
-      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
-    },
-    {
-      id: 'yellowfin-tuna',
-      name: 'Yellowfin Tuna',
-      image: '/product_tuna.png',
-      actionText: 'Contact Us',
-      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
-    },
-    {
       id: 'mahi-mahi',
       name: 'Mahi Mahi',
       image: '/product_mahi.png',
@@ -45,7 +31,51 @@ const FishesPage = () => {
       image: '/hero_fishes_1784093049957.png',
       actionText: 'Contact Us',
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'yellowfin-tuna-new',
+      name: 'Yellowfin Tuna',
+      image: '/prod_new_tuna.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'cleaned-cuttlefish',
+      name: 'Cuttlefish',
+      image: '/prod_new_cuttlefish.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'indian-mackerel-new',
+      name: 'Indian Mackerel',
+      image: '/prod_new_mackerel.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'skipjack-tuna',
+      name: 'Skipjack Tuna',
+      image: '/prod_new_skipjack.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+
+    {
+      id: 'mahi-mahi-new',
+      name: 'Mahi Mahi',
+      image: '/prod_new_mahimahi.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'tuna-whole-new',
+      name: 'Yellowfin Tuna',
+      image: '/prod_tuna_whole.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
     }
+
   ];
 
   return (
@@ -91,7 +121,7 @@ const FishesPage = () => {
                   <img src={prod.image} alt={prod.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="relative bg-white pt-6 pb-2 px-8 -mt-12 z-10 w-[85%] shadow-sm min-h-[5rem] flex items-center">
-                   <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
+                  <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
                 </div>
                 <div className="bg-[#0a3161] p-5 mt-auto flex justify-between items-center text-white">
                   <Link to={`/contact?product=${prod.id}`} className="flex items-center gap-2 text-sm font-medium hover:text-[#f4c430] transition-colors tracking-wide">

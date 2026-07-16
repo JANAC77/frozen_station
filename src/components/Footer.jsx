@@ -7,17 +7,6 @@ const Footer = () => {
     <footer id="contact" className="bg-gray-900 text-white pt-20 pb-10 border-t-4 border-brand-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Call to Action Banner */}
-        <div className="bg-brand-primary rounded-3xl p-8 md:p-10 mb-12 shadow-2xl -mt-16 md:-mt-24 flex flex-col md:flex-row items-center justify-between border border-white/10 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/20 rounded-full blur-3xl"></div>
-          <div className="relative z-10 mb-6 md:mb-0 text-center md:text-left">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Ready to partner with us?</h3>
-            <p className="text-brand-secondary font-medium text-base md:text-lg">Delivering confidence, consistency, and quality with every shipment.</p>
-          </div>
-          <Link to="/contact" className="relative z-10 bg-brand-secondary hover:bg-white hover:text-brand-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold transition-all duration-300 shadow-lg whitespace-nowrap">
-            Contact Our Team
-          </Link>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
@@ -29,20 +18,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6 leading-relaxed">
               We don’t simply supply seafood—we build lasting partnerships by delivering confidence, consistency, and quality with every shipment.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-brand-secondary transition-colors" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-brand-secondary transition-colors" aria-label="Twitter">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-brand-secondary transition-colors" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-brand-secondary transition-colors" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-              </a>
-            </div>
+
           </div>
 
           {/* Quick Links */}
@@ -64,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li><Link to="/products" className="text-slate-400 hover:text-white transition-colors text-[15px]">Vannamei Shrimp</Link></li>
               <li><Link to="/products" className="text-slate-400 hover:text-white transition-colors text-[15px]">Black Tiger Shrimp</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-white transition-colors text-[15px]">Yellowfin Tuna</Link></li>
+
               <li><Link to="/products" className="text-slate-400 hover:text-white transition-colors text-[15px]">Mahi Mahi</Link></li>
               <li><Link to="/products" className="text-slate-400 hover:text-white transition-colors text-[15px]">Cephalopods</Link></li>
             </ul>

@@ -40,20 +40,13 @@ const GlobalMarketsPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-20 h-20 mx-auto bg-[#0a3161] rounded-full flex items-center justify-center text-white mb-6 shadow-xl">
                 <Globe size={40} />
               </div>
               <h4 className="text-2xl font-bold text-[#0a3161] mb-4">Major Destinations</h4>
-              <p className="text-gray-600">Exporting regularly to the USA, European Union, Middle East, China, Japan, and Southeast Asia.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto bg-[#f4c430] rounded-full flex items-center justify-center text-[#0a3161] mb-6 shadow-xl">
-                <Anchor size={40} />
-              </div>
-              <h4 className="text-2xl font-bold text-[#0a3161] mb-4">Port Logistics</h4>
-              <p className="text-gray-600">Strategic proximity to major international ports ensures faster transit times and optimal cold-chain preservation.</p>
+              <p className="text-gray-600">Exporting regularly to the European Union, Middle East, China, and Southeast Asia.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 mx-auto bg-[#0a3161] rounded-full flex items-center justify-center text-white mb-6 shadow-xl">

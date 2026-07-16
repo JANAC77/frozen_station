@@ -40,12 +40,33 @@ const ShrimpsPage = () => {
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
     },
     {
-      id: 'pud-poovalan',
-      name: 'PUD Poovalan',
-      image: '/prod_pud_poovalan_1784091981251.png',
-      actionText: 'More Details',
+      id: 'black-tiger-hoso',
+      name: 'Black Tiger',
+      image: '/prod_black_tiger_hoso.jpg',
+      actionText: 'Contact Us',
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
-    }
+    },
+    {
+      id: 'vannamei-hlso-51-60',
+      name: 'Vannamei HLSO',
+      image: '/prod_vannamei_hlso_51_60.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'vannamei-pd',
+      name: 'Vannamei PD',
+      image: '/prod_vannamei_pd.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'pvpdto-16-20',
+      name: 'Vannamei PDTO',
+      image: '/prod_pvpdto_16_20.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
   ];
 
   return (
@@ -91,7 +112,7 @@ const ShrimpsPage = () => {
                   <img src={prod.image} alt={prod.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="relative bg-white pt-6 pb-2 px-8 -mt-12 z-10 w-[85%] shadow-sm min-h-[5rem] flex items-center">
-                   <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
+                  <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
                 </div>
                 <div className="bg-[#0a3161] p-5 mt-auto flex justify-between items-center text-white">
                   <Link to={`/contact?product=${prod.id}`} className="flex items-center gap-2 text-sm font-medium hover:text-[#f4c430] transition-colors tracking-wide">

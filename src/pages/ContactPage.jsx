@@ -7,16 +7,15 @@ const ContactPage = () => {
     <main className="pt-24 pb-20 bg-gray-50 min-h-screen relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 left-0 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl -z-10"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-brand-secondary font-bold tracking-widest uppercase text-sm mb-3">Get In Touch</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-primary">Contact Us</h1>
           <div className="w-24 h-1 bg-gradient-to-r from-brand-secondary to-blue-500 mx-auto mt-6 rounded-full"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-            Whether you have a question about our products, pricing, or international shipping logistics, our team is ready to answer all your questions.
-          </p>
+            Whether you have a question about our products, pricing, or future business, our team is ready to answer all your questions.          </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
@@ -27,7 +26,7 @@ const ContactPage = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mt-10 -mr-10"></div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
-                
+
                 <div className="space-y-8">
                   <div className="flex items-start gap-4 group">
                     <div className="bg-white/10 p-4 rounded-2xl text-brand-secondary group-hover:bg-brand-secondary group-hover:text-white transition-colors">
@@ -36,7 +35,7 @@ const ContactPage = () => {
                     <div>
                       <h4 className="text-lg font-bold text-white mb-1">Our Office</h4>
                       <p className="text-gray-300 leading-relaxed">
-                        Cochin, Kerala<br/>
+                        Cochin, Kerala<br />
                         India
                       </p>
                     </div>
@@ -67,10 +66,10 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
                 <p className="text-gray-400 text-sm">
-                  Available Monday - Friday, 9:00 AM to 6:00 PM (IST)
+                  Available Monday - Saturday, 9:00 AM to 6:00 PM (IST)
                 </p>
               </div>
             </div>

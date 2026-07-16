@@ -12,13 +12,6 @@ const CephalopodsPage = () => {
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
     },
     {
-      id: 'cuttlefish',
-      name: 'Cuttlefish',
-      image: '/prod_cuttlefish_1784093081042.png',
-      actionText: 'Contact Us',
-      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
-    },
-    {
       id: 'octopus',
       name: 'Octopus',
       image: '/prod_octopus_1784093090923.png',
@@ -45,6 +38,20 @@ const CephalopodsPage = () => {
       image: '/hero_cephalopods_1784093040420.png',
       actionText: 'Contact Us',
       actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'squid-block-u3',
+      name: 'Whole Squid Block U/3',
+      image: '/prod_new_squid_u3.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
+    },
+    {
+      id: 'whole-squid-u2',
+      name: 'Whole Squid U/2',
+      image: '/prod_new_squid.jpg',
+      actionText: 'Contact Us',
+      actionIcon: <Smartphone size={24} className="text-white opacity-90" strokeWidth={1.5} />
     }
   ];
 
@@ -54,7 +61,7 @@ const CephalopodsPage = () => {
       <section className="relative h-[55vh] min-h-[400px] flex items-center pt-20">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/hero_cephalopods_1784093040420.png")' }}
+          style={{ backgroundImage: 'url("/prod_new_squid.jpg")' }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a3161]/90 via-[#0a3161]/60 to-[#0a3161]/40"></div>
         </div>
@@ -91,7 +98,7 @@ const CephalopodsPage = () => {
                   <img src={prod.image} alt={prod.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="relative bg-white pt-6 pb-2 px-8 -mt-12 z-10 w-[85%] shadow-sm min-h-[5rem] flex items-center">
-                   <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
+                  <h3 className="text-[#0a3161] text-[1.3rem] font-bold whitespace-pre-line leading-tight">{prod.name}</h3>
                 </div>
                 <div className="bg-[#0a3161] p-5 mt-auto flex justify-between items-center text-white">
                   <Link to={`/contact?product=${prod.id}`} className="flex items-center gap-2 text-sm font-medium hover:text-[#f4c430] transition-colors tracking-wide">

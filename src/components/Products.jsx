@@ -21,16 +21,16 @@ const Products = () => {
       styles: ["HOSO (Head-On Shell-On)", "HLSO (Headless Shell-On)", "PD (Peeled & Deveined)", "PDTO (Peeled Deveined Tail-On)", "EZ Peel", "IQF & Block Frozen", "Custom packing as per requirements"]
     },
     fish: {
-      image: "/product_tuna.png",
+      image: "/prod_tuna_whole.jpg",
       title: "Finest Catch Fish",
       description: "Our comprehensive range of fish products is sourced fresh and frozen rapidly to lock in quality.",
-      items: ["Yellowfin Tuna", "Skipjack Tuna", "Mahi Mahi", "Swordfish", "Indian Mackerel", "Leather Jacket", "And many other Fish Products"],
+      items: ["Skipjack Tuna", "Mahi Mahi", "Swordfish", "Indian Mackerel", "Leather Jacket", "And many other Fish Products"],
     },
     cephalopods: {
       image: "/product_cephalopod.png",
       title: "Quality Cephalopods",
       description: "Expertly sourced and processed cephalopods ensuring tender texture and supreme taste.",
-      items: ["Cuttlefish", "Squid", "Octopus"],
+      items: ["Squid", "Octopus"],
     }
   };
 
